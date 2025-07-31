@@ -1,0 +1,278 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #111827;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #7c3aed, #4f46e5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+#navbar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #facc15;
+}
+
+/* Welcome Section */
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #1e40af, #6b21a8);
+  text-align: center;
+}
+
+#welcome-section .container {
+  padding: 32px;
+}
+
+#welcome-section h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  animation: pulse 2s infinite;
+}
+
+#welcome-section p {
+  font-size: 1.25rem;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Projects Section */
+#projects {
+  padding: 64px 0;
+  background-color: #1f2937;
+}
+
+#projects h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: #facc15;
+  margin-bottom: 48px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.project-tile {
+  background-color: #374151;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-tile:hover {
+  background-color: #4b5563;
+  transform: translateY(-5px);
+}
+
+.project-tile h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.project-tile p {
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.project-tile a {
+  color: #facc15;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-tile a:hover {
+  text-decoration: underline;
+}
+
+/* About Section */
+#about {
+  padding: 64px 0;
+  background: linear-gradient(to bottom, #6b21a8, #1e40af);
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #facc15;
+  margin-bottom: 32px;
+}
+
+#about p {
+  font-size: 1.125rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+#contact {
+  padding: 64px 0;
+  background-color: #1f2937;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #facc15;
+  margin-bottom: 32px;
+}
+
+#contact p {
+  font-size: 1.125rem;
+  margin-bottom: 16px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-links a {
+  background-color: #facc15;
+  color: #111827;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #eab308;
+}
+
+/* Footer */
+#footer {
+  padding: 32px 0;
+  background: linear-gradient(to right, #7c3aed, #4f46e5);
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+}
+
+.footer-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.footer-info p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.footer-links h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #facc15;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  #navbar .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  #welcome-section h1 {
+    font-size: 2.5rem;
+  }
+  #welcome-section p {
+    font-size: 1.125rem;
+  }
+  .social-links {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .footer-grid {
+    text-align: center;
+  }
+}
