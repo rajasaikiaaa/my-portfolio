@@ -143,6 +143,11 @@ body {
   text-decoration: underline;
 }
 
+#cors {
+  font-style: italic;
+  font-size: .7rem;
+}
+
 /* About Section */
 #about {
   padding: 64px 0;
